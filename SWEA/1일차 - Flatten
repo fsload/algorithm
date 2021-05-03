@@ -1,4 +1,3 @@
-```py
 TC = 10
  
 for t in range(TC):
@@ -12,4 +11,3 @@ for t in range(TC):
         arr[minIdx] = min(arr) + 1
  
     print('#' + str(t+1), max(arr) - min(arr))
-```
