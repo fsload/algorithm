@@ -1,0 +1,29 @@
+N = int(input())
+li = []
+for i in range(N):
+    li.append(i+1)
+print(li)
+
+ans = []
+index = 0
+while li:
+    num = int(input())
+    if num not in li:
+        print('NO')
+        break
+    ans.append('+')
+    while True:
+        if num == li[index]:
+            break
+
+        else:
+            if num > li[index]:
+                index += 1
+                ans.append('+')
+
+            elif num < li[index]:
+                index -= 1
+                ans.append('-')
+    ans.append('-')
+    print(li.pop(index))
+    print(ans, index)
